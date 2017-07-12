@@ -1,4 +1,4 @@
-package com.jy;
+ï»¿package com.jy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
@@ -6,21 +6,21 @@ import java.lang.reflect.Proxy;
 public class ProxyPattern {
 
 	public static void main(String[] args) {
-		SchoolGirl schoolGirl = new SchoolGirl("½¿½¿");
-		// ¾²Ì¬´úÀí
+		SchoolGirl schoolGirl = new SchoolGirl("å¨‡å¨‡");
+		// é™æ€ä»£ç†
 		// StaticProxy staticProxy = new StaticProxy(schoolGirl);
 		// staticProxy.giveDolls();
 		// staticProxy.giveFlowers();
 		// staticProxy.giveChocolate();
 
-		// ¶¯Ì¬´úÀí
+		// åŠ¨æ€ä»£ç†
 		Pursuit pursuit = new Pursuit(schoolGirl);
 		InvocationHandler handler = new DynamicProxy(pursuit);
 		/*
-		 * Í¨¹ıProxyµÄnewProxyInstance·½·¨À´´´½¨ÎÒÃÇµÄ´úÀí¶ÔÏó£¬ÎÒÃÇÀ´¿´¿´ÆäÈı¸ö²ÎÊı 
-		 * µÚÒ»¸ö²ÎÊıhandler.getClass().getClassLoader()£¬ÎÒÃÇÕâÀïÊ¹ÓÃhandlerÕâ¸öÀàµÄClassLoader¶ÔÏóÀ´¼ÓÔØÎÒÃÇµÄ´úÀí¶ÔÏó
-		 * µÚ¶ş¸ö²ÎÊıpursuit.getClass().getInterfaces()£¬ÎÒÃÇÕâÀïÎª´úÀí¶ÔÏóÌá¹©µÄ½Ó¿ÚÊÇÕæÊµ¶ÔÏóËùÊµÏÖµÄ½Ó¿Ú£¬±íÊ¾ÎÒÒª´úÀíµÄÊÇ¸ÃÕæÊµ¶ÔÏó£¬ÕâÑùÎÒ¾ÍÄÜµ÷ÓÃÕâ×é½Ó¿ÚÖĞµÄ·½·¨ÁË
-		 * µÚÈı¸ö²ÎÊıhandler£¬ ÎÒÃÇÕâÀï½«Õâ¸ö´úÀí¶ÔÏó¹ØÁªµ½ÁËÉÏ·½µÄInvocationHandlerÕâ¸ö¶ÔÏóÉÏ
+		 * é€šè¿‡Proxyçš„newProxyInstanceæ–¹æ³•æ¥åˆ›å»ºæˆ‘ä»¬çš„ä»£ç†å¯¹è±¡ï¼Œæˆ‘ä»¬æ¥çœ‹çœ‹å…¶ä¸‰ä¸ªå‚æ•° 
+		 * ç¬¬ä¸€ä¸ªå‚æ•°handler.getClass().getClassLoader()ï¼Œæˆ‘ä»¬è¿™é‡Œä½¿ç”¨handlerè¿™ä¸ªç±»çš„ClassLoaderå¯¹è±¡æ¥åŠ è½½æˆ‘ä»¬çš„ä»£ç†å¯¹è±¡
+		 * ç¬¬äºŒä¸ªå‚æ•°pursuit.getClass().getInterfaces()ï¼Œæˆ‘ä»¬è¿™é‡Œä¸ºä»£ç†å¯¹è±¡æä¾›çš„æ¥å£æ˜¯çœŸå®å¯¹è±¡æ‰€å®ç°çš„æ¥å£ï¼Œè¡¨ç¤ºæˆ‘è¦ä»£ç†çš„æ˜¯è¯¥çœŸå®å¯¹è±¡ï¼Œè¿™æ ·æˆ‘å°±èƒ½è°ƒç”¨è¿™ç»„æ¥å£ä¸­çš„æ–¹æ³•äº†
+		 * ç¬¬ä¸‰ä¸ªå‚æ•°handlerï¼Œ æˆ‘ä»¬è¿™é‡Œå°†è¿™ä¸ªä»£ç†å¯¹è±¡å…³è”åˆ°äº†ä¸Šæ–¹çš„InvocationHandlerè¿™ä¸ªå¯¹è±¡ä¸Š
 		 * 
 		 */
 		GiveGift giveGift = (GiveGift) Proxy.newProxyInstance(handler.getClass().getClassLoader(),

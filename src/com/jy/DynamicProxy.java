@@ -1,16 +1,16 @@
-package com.jy;
+ï»¿package com.jy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
- * ¶¯Ì¬´úÀí
+ * åŠ¨æ€ä»£ç†
  * 
  * @author jiangyu
  *
  */
 public class DynamicProxy implements InvocationHandler {
-	// ±»´úÀíµÄ¶ÔÏó
+	// è¢«ä»£ç†çš„å¯¹è±¡
 	private Object object;
 
 	public DynamicProxy(Object object) {
@@ -19,14 +19,14 @@ public class DynamicProxy implements InvocationHandler {
 	}
 
 	/**
-	 * ¶¯Ì¬´úÀíÄ£Ê½¿ÉÒÔÊ¹µÃÎÒÃÇÔÚ²»¸Ä±äÔ­À´ÒÑÓĞµÄ´úÂë½á¹¹µÄÇé¿öÏÂ,¶ÔÔ­À´µÄ¡°ÕæÊµ·½·¨¡±½øĞĞÀ©Õ¹¡¢ÔöÇ¿Æä¹¦ÄÜ£¬²¢ÇÒ¿ÉÒÔ´ïµ½¿ØÖÆ±»´úÀí¶ÔÏóµÄĞĞÎª,
-	 * ÏÂÃæµÄbefore¡¢after¾ÍÊÇÎÒÃÇ¿ÉÒÔ½øĞĞÌØÊâ´úÂëÇĞÈëµÄÀ©Õ¹µã
+	 * åŠ¨æ€ä»£ç†æ¨¡å¼å¯ä»¥ä½¿å¾—æˆ‘ä»¬åœ¨ä¸æ”¹å˜åŸæ¥å·²æœ‰çš„ä»£ç ç»“æ„çš„æƒ…å†µä¸‹,å¯¹åŸæ¥çš„â€œçœŸå®æ–¹æ³•â€è¿›è¡Œæ‰©å±•ã€å¢å¼ºå…¶åŠŸèƒ½ï¼Œå¹¶ä¸”å¯ä»¥è¾¾åˆ°æ§åˆ¶è¢«ä»£ç†å¯¹è±¡çš„è¡Œä¸º,
+	 * ä¸‹é¢çš„beforeã€afterå°±æ˜¯æˆ‘ä»¬å¯ä»¥è¿›è¡Œç‰¹æ®Šä»£ç åˆ‡å…¥çš„æ‰©å±•ç‚¹
 	 * 
 	 */
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 		/*
-		 * before £ºdoSomething();
+		 * before ï¼šdoSomething();
 		 */
 		Object result = method.invoke(object, args);
 		/*

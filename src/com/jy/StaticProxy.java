@@ -1,7 +1,7 @@
-package com.jy;
+ï»¿package com.jy;
 
 /**
- * ¾²Ì¬´úÀí
+ * é™æ€ä»£ç†
  * 
  * @author jiangyu
  *

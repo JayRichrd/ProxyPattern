@@ -1,4 +1,4 @@
-package com.jy;
+ï»¿package com.jy;
 
 public class Pursuit implements GiveGift {
 	private SchoolGirl mSchoolGirl;
@@ -10,18 +10,18 @@ public class Pursuit implements GiveGift {
 
 	@Override
 	public void giveDolls() {
-		System.out.println(mSchoolGirl.getName() + ",×·ÇóÕß" + "ËÍÄãÑóÍŞÍŞ!");
+		System.out.println(mSchoolGirl.getName() + ",è¿½æ±‚è€…" + "é€ä½ æ´‹å¨ƒå¨ƒ!");
 	}
 
 	@Override
 	public void giveFlowers() {
-		System.out.println(mSchoolGirl.getName() + ",×·ÇóÕß" + "ËÍÄãÏÊ»¨!");
+		System.out.println(mSchoolGirl.getName() + ",è¿½æ±‚è€…" + "é€ä½ é²œèŠ±!");
 
 	}
 
 	@Override
 	public void giveChocolate() {
-		System.out.println(mSchoolGirl.getName() + ",×·ÇóÕß" + "ËÍÄãÇÉ¿ËÁ¦!");
+		System.out.println(mSchoolGirl.getName() + ",è¿½æ±‚è€…" + "é€ä½ å·§å…‹åŠ›!");
 
 	}
 
