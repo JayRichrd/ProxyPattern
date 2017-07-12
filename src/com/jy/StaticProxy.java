@@ -1,9 +1,15 @@
 package com.jy;
 
-public class Proxy implements GiveGift {
+/**
+ * ¾²Ì¬´úÀí
+ * 
+ * @author jiangyu
+ *
+ */
+public class StaticProxy implements GiveGift {
 	private Pursuit mPursuit;
 
-	public Proxy(SchoolGirl schoolGirl) {
+	public StaticProxy(SchoolGirl schoolGirl) {
 		super();
 		mPursuit = new Pursuit(schoolGirl);
 	}
